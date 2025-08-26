@@ -83,7 +83,7 @@ router.post('/api/auth/signup', async (req, res) => {
         // password hashing
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        const verificationToken = jwt.sign({ email }, process.env.SECRET_KEY, { expiresIn: process.env.VERIFICATION_TOKEN_EXPIRY_TIME });
+        const verificationToken = jwt.sign({ email }, process.env.SECRET_KEY, { expiresIn: process.env.VERIFICATION_TOKEN_EXPIRY_TIME || "1h" });
 
         const name = removeNumsFromStr(email.split("@")[0]);
         // create  user in db
