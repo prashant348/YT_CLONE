@@ -37,7 +37,7 @@ const CookieOptions = {
     secure: isProd, // production: true (http), development: false
     sameSite: isProd ? "strict": "lax",
     path: '/',
-    maxAge: Number(process.env.COOKIE_EXPIRY_TIME) // 7 days
+    maxAge: 7 * 24 * 60 * 60 * 1000  // 7 days
 };
 
 
