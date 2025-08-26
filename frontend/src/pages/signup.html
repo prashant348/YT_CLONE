@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/src/css/output.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    
+</head>
+<body class="p-0 m-0 h-screen box-border bg-[#0F0F0F] text-[#F1F1F1] font-poppins">
+    <div class="wrapper h-full w-full bg-[#0F0F0F] flex justify-center items-center">
+        <form action="/api/auth/signup" method="post" class="form min-h-[550px] w-[320px] sm:w-[360px] rounded-xl bg-[#0F0F0F] shadow-[0px_0px_10px_10px_rgba(10,10,10,0.7)] border border-[#363636] flex flex-col items-center py-4 px-4 mx-5">
+            <h1 class="text-3xl mb-1 mt-2">Sign Up</h1>
+            <p class="text-xs my-1 opacity-70">Sign up to youtube.clone</p>
+            <div class="form-fields w-full flex flex-col gap-4 py-4">
+                <input type="text" name="username" id="username" placeholder="Username" class="input-field h-10 rounded-lg outline-none border border-[#363636] px-3  bg-[#121212] placeholder:text-[#686868] " required>
+                <input type="email" name="email" placeholder="Email" class="input-field h-10 rounded-lg outline-none border border-[#363636] px-3  bg-[#121212] placeholder:text-[#686868] " required>
+                <div class="w-full flex password-input-box">
+                    <input type="password" name="password" placeholder="Password" class="input-field-password h-10 w-full rounded-lg border-r-0 rounded-r-none outline-none border border-[#363636] px-3  bg-[#121212] placeholder:text-[#686868] " required>
+                    <div class="visibility-btn-box bg-[#121212] h-10 w-11 rounded-r-lg border border-[#363636] border-l-0 flex justify-center items-center"> 
+                        <button type="button" class="visibility-btn  h-8 w-8 rounded-full hover:bg-[#212121] border-l-0 flex justify-center items-center">
+                            <img src="/public/visibility_off_icon.svg" alt="" class="h-5 relative top-[0.5px]" >
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="signup-btn-box w-full mt-3">
+                <button type="submit" class="signup-btn h-10 w-full rounded-lg bg-[#0078D7] font-poppins hover:bg-[#00a2ff]">Sign Up</button>
+            </div>
+
+            
+            <div class="line my-5 flex justify-between gap-2 items-center w-full">
+                <div class="h-[1px] bg-[#363636] w-full"></div><div>or</div><div class="h-[1px] bg-[#363636] w-full"></div>
+            </div>
+            <p class="text-xs">Already have an account?</p>
+            <div class="login-btn-box w-full mt-4">
+                <!-- green color button -->
+                <button type="button" class="login-btn h-10 w-full rounded-lg bg-[#00d72fda] font-poppins hover:bg-[#00da1d]">Log In</button>
+            </div>
+            <div class="w-full flex justify-center items-center mt-10 mb-5">
+                <a href="/" class="text-xs  flex items-center pr-1 gap-[1px] hover:border-b-[1px] h-3 hover:border-t-[1px] hover:border-t-transparent">
+                    <img src="/public/arrow_back.svg" alt="arrow_back_icon" class="h-4">
+                    <span>Go back</span>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script src="/src/js/signup.js"></script>
+</body>
+</html>

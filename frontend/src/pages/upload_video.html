@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video</title>
+    <link rel="stylesheet" href="/src/css/output.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+<body class="p-0 m-0 h-screen box-border bg-[#0F0F0F] text-[#F1F1F1] font-poppins">
+
+    <div class="wrapper h-full w-full bg-[#0F0F0F] flex justify-center items-center">
+        <div class="upload-video-container flex flex-col  items-center py-4 px-5 w-[300px] min-h-[380px] sm:w-[400px] bg-[#121212] border border-[#363636] shadow-[0px_0px_10px_10px_rgba(10,10,10,0.7)] rounded-xl">
+            <div class="w-full">
+                <h1 class="text-xl">Upload file</h1>
+                <p class="text-xs my-1 opacity-70">Click to upload or drag and drop</p>
+            </div>
+
+            <div class="dropbox hover:bg-[#212121] text-center p-4 hover:border-dotted  hover:border-[#b8b8b8] w-full mt-4 mb-2 min-h-[200px] flex justify-center items-center bg-[#121212] rounded-lg border-2 border-[#363636]">
+                <input type="file" accept="video/*" class="file-input" hidden>
+                <div class="dropbox-wrapper">
+                    <img src="/public/cloud_upload.svg" alt="arrow_upload_progress" class="h-16">
+                </div>
+            </div>
+
+            <div class="text-xs min-h-[70px] flex flex-col  justify-between w-full pb-1">
+                <p class="text-[10px] sm:text-xs opacity-80 flex justify-between"><span>Supported format: MP4</span><span>Max file size: 100MB</span></p>
+
+                <div class="video-title-box hidden w-full h-[102px] sm:h-[100px] justify-center items-center py-2 text-sm sm:text-lg">
+                    <textarea name="video-title" placeholder="Video title" class="video-title-input w-full h-full rounded-lg outline-none border border-[#363636] p-2  bg-[#121212] placeholder:text-[#686868] scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#686868]" required></textarea>
+                </div>
+
+                <div class="drop-box-btns-box flex justify-end items-center gap-2 ">
+                    <button type="button" class="cancel-btn h-8 w-[80px] rounded-lg bg-red-700 hover:bg-red-500">Cancel</button>
+                    <button type="button" class="h-8 w-[80px] rounded-lg border border-[#363636] bg-[#0F0F0F] hover:bg-[#212121]">Upload</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/src/js/upload_video.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/src/css/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="p-0 m-0 h-screen box-border bg-[#0F0F0F] text-[#F1F1F1] font-poppins ">
+    <div class="wrapper h-full w-full flex justify-center items-center ">
+        <div
+            class="profile-box w-full h-full sm:h-[450px] sm:w-[700px] sm:grid sm:grid-rows-[200px_12px_1fr] shadow-[0px_0px_10px_10px_rgba(10,10,10,0.7)] bg-[#121212] sm:rounded-lg border border-[#363636]  p-4">
+            <div
+                class="primary-box  row-span-1 flex flex-col sm:flex-row gap-3 sm:gap-8 justify-start items-center px-3">
+
+                <div
+                    class="user-profile-pic-box cursor-pointer bg-[#121212] overflow-hidden object-center  w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] border-[2px] border-[#f1f1f1] rounded-full flex justify-center items-center">
+                    <input type="file" accept="image/*" class="image-file-input" hidden>
+                    <div class="profile-pic-wrapper w-full h-full opacity-80">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24"
+                            width="24" focusable="false" aria-hidden="true"
+                            style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                            <path clip-rule="evenodd"
+                                d="M12 20.5c1.894 0 3.643-.62 5.055-1.666a5.5 5.5 0 00-10.064-.105.755.755 0 01-.054.099A8.462 8.462 0 0012 20.5Zm4.079-5.189a7 7 0 012.142 2.48 8.5 8.5 0 10-12.443 0 7 7 0 0110.3-2.48ZM12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm2-12.5a2 2 0 11-4 0 2 2 0 014 0Zm1.5 0a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0Z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <img src="" alt="user-profile-pic" class="user-profile-pic hidden">
+                </div>
+
+                <div class="user-details-box w-full sm:w-auto  flex flex-col items-center sm:items-start sm:gap-2 ">
+                    <h1 class="text-2xl sm:text-3xl">Name</h1>
+                    <h3 class="text-lg sm:text-xl">Username</h3>
+                    <p class="opacity-50 text-sm sm:text-lg">Email</p>
+                </div>
+            </div>
+
+            <div class="hori-line row-span-1 h-[1px] w-full self-end mt-4 sm:mt-0  bg-[#363636]">
+            </div>
+
+            <div class="secondary-box row-span-3 px-3 py-5 ">
+
+                <div class="sec-box-btns-box flex w-full flex-col">
+                    <a href="/channel" class="h-10 rounded-lg pl-3 hover:bg-[#212121]  flex gap-2 items-center">
+                        <img src="/public/arrow_outward_00A2FF.svg" alt="arrow_outward_00A2FF_icon">
+                        <span class="text-[#00a2ff]">View Your Channel</span>
+                    </a>
+
+                    <a href="" class="h-10 rounded-lg pl-3 hover:bg-[#212121]  flex gap-2 items-center">
+                        <div class="h-6 w-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24"
+                                width="24" focusable="false" aria-hidden="true"
+                                style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                <path clip-rule="evenodd"
+                                    d="M17.53 11.53c.293-.293.293-.767 0-1.06-.293-.293-.767-.293-1.06 0l-3.72 3.72V3c0-.414-.336-.75-.75-.75s-.75.336-.75.75v11.19l-3.72-3.72c-.293-.293-.767-.293-1.06 0-.293.293-.293.767 0 1.06l5 5 .53.53.53-.53 5-5Zm1.72 8.97c.414 0 .75-.336.75-.75s-.336-.75-.75-.75H4.75c-.414 0-.75.336-.75.75s.336.75.75.75h14.5Z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <span>Downloads</span>
+                    </a>
+
+                    <a href="/" class="h-10 rounded-lg pl-3 hover:bg-[#212121]  flex gap-2 items-center">
+                        <div class="h-6 w-6">
+                            <img src="/public/home_icon.svg" alt="home_icon">
+                        </div>
+                        <span>Home</span>
+                    </a>
+
+                    <a class="logout-btn h-10 rounded-lg pl-3 bg-red-700 hover:bg-red-500 cursor-pointer   flex gap-2 items-center">
+                        <img src="/public/logout.svg" alt="logout">
+                        <span>Log Out</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal w-full h-full fixed top-0 left-0 z-10  bg-[#0f0f0fb0] hidden justify-center items-center">
+        <div
+            class="modal-box w-[300px] h-[120px] sm:w-[360px] sm:h-[140px] bg-[#0f0f0f] border border-[#363636] rounded-lg flex flex-col justify-between py-4 sm:py-5 shadow-[0_0_10px_10px_rgba(10,10,10,0.7)]">
+            <div class="msg-box  text-center text-sm sm:text-[18px] mt-2">
+                Are you sure you want to log out?
+            </div>
+            <div class="btns-box flex justify-end gap-2 pr-5 mb-1 sm:mb-0 ">
+                <button
+                    class="modal-cancel-btn text-sm sm:text-[16px] h-8 w-[80px] sm:h-10 sm:w-[100px] rounded-lg bg-red-700 hover:bg-red-500">Cancel</button>
+                <button
+                    class="modal-logout-btn text-sm sm:text-[16px] h-8 w-[80px] sm:h-10 sm:w-[100px] rounded-lg border border-[#363636] bg-[#0F0F0F] hover:bg-[#212121]">Log
+                    Out</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-pic-modal w-full h-full fixed top-0 left-0 z-10  bg-[#0f0f0fb0] hidden justify-center items-center">
+        <div
+            class="profile-pic-modal-box w-[280px] h-[130px] sm:w-[360px] sm:h-[140px] bg-[#0f0f0f] border border-[#363636] rounded-lg flex flex-col justify-between py-3 sm:py-4 shadow-[0_0_10px_10px_rgba(10,10,10,0.7)]">
+            <div class="msg-box  text-center text-sm sm:text-[18px] mt-2">
+                You want to change the <br>Profile Picture?
+            </div>
+            <div class="profile-pic-btns-box flex justify-center gap-2 mb-1 sm:mb-0 ">
+                <button
+                    class="profile-pic-modal-remove-btn text-sm sm:text-[16px] h-8 w-[80px] sm:h-10 sm:w-[100px] rounded-lg bg-red-700 hover:bg-red-500">Remove</button>
+                <button
+                    class="profile-pic-modal-change-btn text-sm sm:text-[16px] h-8 w-[80px] sm:h-10 sm:w-[100px] rounded-lg border border-[#363636] bg-[#0F0F0F] hover:bg-[#212121]">Change</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/src/js/profile.js"></script>
+</body>
+
+</html>
