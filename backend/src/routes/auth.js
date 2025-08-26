@@ -106,12 +106,14 @@ router.post('/api/auth/signup', async (req, res) => {
         });
 
         const verificationUrl = `http://localhost:3000/api/auth/verify-email?token=${verificationToken}`;
-       
+        const productionVerificationUrl = `https://yt-clone-qjl6.onrender.com/api/auth/verify-email?token=${verificationToken}`;
+
+
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
             to: email,
             subject: "Verify your email",
-            html: `<p>Click <a href="${verificationUrl}">here</a> to verify your email.</p>`
+            html: `<p>Click <a href="${productionVerificationUrl}">here</a> to verify your email.</p>`
         }).catch(err => console.log(err));
 
 
