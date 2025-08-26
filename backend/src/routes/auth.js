@@ -177,7 +177,7 @@ router.post('/api/auth/login', async (req, res) => {
         if (!isPasswordMatch) return res.status(401).json({ message: "Invalid password!" });
 
         // create jwt token
-        const token = jwt.sign({ id: user._id, email: user.email }, process.env.SECRET_KEY, { expiresIn: process.env.LOGIN_TOKEN_EXPIRY_TIME });
+        const token = jwt.sign({ id: user._id, email: user.email }, process.env.SECRET_KEY, { expiresIn: process.env.LOGIN_TOKEN_EXPIRY_TIME || "7d" });
 
         // update user status
         user.status = "logged_in";
