@@ -81,7 +81,8 @@ mobileSrchBtn.addEventListener('click', () => {
     navbarWrapper.style.display = 'none';
     bottomNavbar.style.display = 'none';
     try {
-        contentArea.style.display = 'none';
+        contentArea.classList.remove('hidden');
+        contentArea.classList.add('hidden');
         channelBox.style.display = 'none';
     } catch (e) {
         console.log("e")
@@ -98,7 +99,8 @@ mobileSrchBarBackBtn.addEventListener('click', () => {
     mobileSrchBarBox.style.display = 'none';
     navbarWrapper.style.display = 'flex';
     try {
-        contentArea.style.display = '';
+        contentArea.classList.remove('hidden');
+        contentArea.classList.add('hidden');
         channelBox.style.display = '';
     } catch (e) {
         console.log("e")
