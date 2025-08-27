@@ -81,7 +81,7 @@ mobileSrchBtn.addEventListener('click', () => {
     navbarWrapper.style.display = 'none';
     bottomNavbar.style.display = 'none';
     try {
-        contentArea.classList.remove('hidden');
+        contentArea.classList.remove('flex');
         contentArea.classList.add('hidden');
         channelBox.style.display = 'none';
     } catch (e) {
@@ -100,7 +100,7 @@ mobileSrchBarBackBtn.addEventListener('click', () => {
     navbarWrapper.style.display = 'flex';
     try {
         contentArea.classList.remove('hidden');
-        contentArea.classList.add('hidden');
+        contentArea.classList.add('flex');
         channelBox.style.display = '';
     } catch (e) {
         console.log("e")
