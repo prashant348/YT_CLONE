@@ -69,6 +69,7 @@ toggleBtn.addEventListener('click', () => {
 });
 
 // ---------------------------------------------------MOBILE-SEARCH-BTN-LOGIC---------------------------------------------------
+const contentArea = document.querySelector('.content-area');
 const mobileSrchBtn = document.querySelector('.mobile-srch-btn');
 const mobileSrchBarBox = document.querySelector('.mobile-srch-bar-box');
 const navbarWrapper = document.querySelector('.navbar-wrapper');
@@ -80,6 +81,7 @@ mobileSrchBtn.addEventListener('click', () => {
     navbarWrapper.style.display = 'none';
     bottomNavbar.style.display = 'none';
     try {
+        contentArea.style.display = 'none';
         channelBox.style.display = 'none';
     } catch (e) {
         console.log("e")
@@ -96,6 +98,7 @@ mobileSrchBarBackBtn.addEventListener('click', () => {
     mobileSrchBarBox.style.display = 'none';
     navbarWrapper.style.display = 'flex';
     try {
+        contentArea.style.display = '';
         channelBox.style.display = '';
     } catch (e) {
         console.log("e")
@@ -261,7 +264,6 @@ channelBtn.addEventListener('click', async () => {
 
 // ---------------------------------------------SHOW ALL THE POST ON HOME PAGE---------------------------------------------
 
-const contentArea = document.querySelector('.content-area')
 
 // async function makePostAvatarUpdated() {
 //     try {
